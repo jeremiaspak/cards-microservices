@@ -32,18 +32,11 @@ public class PaymentService {
     return paymentRepository.findByCardId(cardId);
   }
 
-  public Payment create(Payment payment) throws CardNotFoundException {
-    try {
-      GetCardInfoResponse cardResponse = cardClient.getInfoById(payment.getCardId());
-      if (!cardResponse.getActive()) {
-        throw new CardIsNotActiveException();
-      }
-    } catch (FeignException e) {
-      if (e.status() == 404) {
-        throw new CardNotFoundException();
-      }
+  public Payment create(Payment payment) throws CardNotFoundException, CardIsNotActiveException {
+    GetCardInfoResponse card = cardClient.getInfoById(payment.getCardId());
+    if (!card.getActive()) {
+      throw new CardIsNotActiveException();
     }
-
     return  paymentRepository.save(payment);
   }
 }
