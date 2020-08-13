@@ -1,0 +1,255 @@
+{
+	"info": {
+		"_postman_id": "8b536d63-bf93-46ae-abb1-7477f93044cc",
+		"name": "Cards",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Clients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cliente",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Client By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cliente/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cliente",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Client",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"José\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/cliente",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Cards",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/cartao",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"cartao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Card By Number",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/cartao/123456789",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"cartao",
+						"123456789"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Card Info By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/cartao/1/info",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"cartao",
+						"1",
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Card",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"numero\": \"111222333\",\n  \"clienteId\": 1\n}\n"
+				},
+				"url": {
+					"raw": "localhost:8081/cartao",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"cartao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Card By Number",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"ativo\": true\n}\n"
+				},
+				"url": {
+					"raw": "localhost:8081/cartao/123456789",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"cartao",
+						"123456789"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Payment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/pagamento/",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"pagamento",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Payments By Card Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/pagamento/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"pagamento",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Payment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"cartao_id\": 1,\n    \"descricao\": \"pão de alho\",\n    \"valor\": 10.5\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/pagamento",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"pagamento"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
