@@ -36,16 +36,9 @@ public class CardService {
     if (cardRepository.findByNumber(card.getNumber()).isPresent()) {
       throw new CardAlreadyExistsException();
     }
-
-    try {
-      GetCustomerResponse customerResponse = customerClient.getById(card.getCustomerId());
-    } catch (FeignException e) {
-      if (e.status() == 404) {
-        throw new CustomerNotFoundException();
-      }
-    }
-
+    GetCustomerResponse customer = customerClient.getById(card.getCustomerId());
     card.setActive(false);
+    card.setCustomerId(customer.getId());
     return cardRepository.save(card);
   }
 
