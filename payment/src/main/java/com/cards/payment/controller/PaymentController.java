@@ -36,16 +36,10 @@ public class PaymentController {
   @PostMapping
   @ResponseStatus(HttpStatus.CREATED)
   public CreatePaymentResponse create(@Valid @RequestBody CreatePaymentRequest paymentRequest) {
-//    Payment payment = paymentService.create(
-//      PaymentMapper.INSTANCE.createPaymentRequestToPayment(paymentRequest)
-//    );
-
-//    return PaymentMapper.INSTANCE.paymentToCreatePaymentResponse(payment);
-
     Payment payment = paymentService.create(
-      paymentMapper.createPaymentRequestToPayment(paymentRequest)
+      PaymentMapper.INSTANCE.createPaymentRequestToPayment(paymentRequest)
     );
 
-    return paymentMapper.paymentToCreatePaymentResponse(payment);
+    return PaymentMapper.INSTANCE.paymentToCreatePaymentResponse(payment);
   }
 }
