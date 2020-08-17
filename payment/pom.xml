@@ -74,7 +74,29 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-	</dependencies>
+    <!-- resilience4j -->
+    <dependency>
+      <groupId>io.github.resilience4j</groupId>
+      <artifactId>resilience4j-spring-boot2</artifactId>
+      <version>1.5.0</version>
+    </dependency>
+    <dependency>
+      <groupId>io.github.resilience4j</groupId>
+      <artifactId>resilience4j-circuitbreaker</artifactId>
+      <version>1.5.0</version>
+    </dependency>
+    <dependency>
+      <groupId>io.github.resilience4j</groupId>
+      <artifactId>resilience4j-ratelimiter</artifactId>
+      <version>1.5.0</version>
+    </dependency>
+    <dependency>
+      <groupId>io.github.resilience4j</groupId>
+      <artifactId>resilience4j-feign</artifactId>
+      <version>1.5.0</version>
+    </dependency>
+    <!-- / resilience4j -->
+  </dependencies>
 
 	<dependencyManagement>
 		<dependencies>
