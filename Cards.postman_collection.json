@@ -93,11 +93,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8081/cartao/123456789",
+					"raw": "localhost:8080/cartao/123456789",
 					"host": [
 						"localhost"
 					],
-					"port": "8081",
+					"port": "8080",
 					"path": [
 						"cartao",
 						"123456789"
@@ -112,11 +112,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8081/cartao/1/info",
+					"raw": "localhost:8080/cartao/1/info",
 					"host": [
 						"localhost"
 					],
-					"port": "8081",
+					"port": "8080",
 					"path": [
 						"cartao",
 						"1",
@@ -143,11 +143,11 @@
 					"raw": "{\n  \"numero\": \"111222333\",\n  \"clienteId\": 1\n}\n"
 				},
 				"url": {
-					"raw": "localhost:8081/cartao",
+					"raw": "localhost:8080/cartao",
 					"host": [
 						"localhost"
 					],
-					"port": "8081",
+					"port": "8080",
 					"path": [
 						"cartao"
 					]
@@ -172,11 +172,11 @@
 					"raw": "{\n  \"ativo\": true\n}\n"
 				},
 				"url": {
-					"raw": "localhost:8081/cartao/123456789",
+					"raw": "localhost:8080/cartao/123456789",
 					"host": [
 						"localhost"
 					],
-					"port": "8081",
+					"port": "8080",
 					"path": [
 						"cartao",
 						"123456789"
@@ -191,11 +191,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8082/pagamento/",
+					"raw": "localhost:8080/pagamento/",
 					"host": [
 						"localhost"
 					],
-					"port": "8082",
+					"port": "8080",
 					"path": [
 						"pagamento",
 						""
@@ -210,11 +210,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8082/pagamento/1",
+					"raw": "localhost:8080/pagamento/1",
 					"host": [
 						"localhost"
 					],
-					"port": "8082",
+					"port": "8080",
 					"path": [
 						"pagamento",
 						"1"
@@ -238,11 +238,11 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8082/pagamento",
+					"raw": "localhost:8080/pagamento",
 					"host": [
 						"localhost"
 					],
-					"port": "8082",
+					"port": "8080",
 					"path": [
 						"pagamento"
 					]
