@@ -18,6 +18,7 @@ public class CardClientConfiguration {
   public Feign.Builder builder() {
     FeignDecorators decorators = FeignDecorators.builder()
       .withFallback(new CardClientFallback(), RetryableException.class)
+      .withFallbackFactory(CardClientLoadBalancerFallback::new, RuntimeException.class)
       .build();
 
     return Resilience4jFeign.builder(decorators);

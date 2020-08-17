@@ -18,6 +18,7 @@ public class CustomerClientConfiguration {
   public Feign.Builder builder() {
     FeignDecorators decorators = FeignDecorators.builder()
       .withFallback(new CustomerClientFallback(), RetryableException.class)
+      .withFallbackFactory(CustomerClienLoadBalancerFallback::new, RuntimeException.class)
       .build();
 
     return Resilience4jFeign.builder(decorators);
