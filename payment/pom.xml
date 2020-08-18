@@ -96,6 +96,10 @@
       <version>1.5.0</version>
     </dependency>
     <!-- / resilience4j -->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-config</artifactId>
+    </dependency>
   </dependencies>
 
 	<dependencyManagement>
