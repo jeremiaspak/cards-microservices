@@ -4,6 +4,7 @@ import com.cards.customer.dto.CreateCustomerRequest;
 import com.cards.customer.dto.CreateCustomerResponse;
 import com.cards.customer.dto.GetCustomerResponse;
 import com.cards.customer.entity.Customer;
+import com.cards.customer.exception.CustomerNotFoundException;
 import com.cards.customer.mapper.CustomerMapper;
 import com.cards.customer.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
